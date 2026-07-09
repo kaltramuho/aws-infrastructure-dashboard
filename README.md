@@ -23,13 +23,7 @@ Designed for modern DevOps teams, the platform centralizes AWS infrastructure vi
 
 ---
 
-## 📸 Screenshots
 
-### CloudWatch Dashboard
-
-![CloudWatch Dashboard](https://docs.aws.amazon.com/images/AmazonCloudWatch/latest/monitoring/images/dashboard-overview.png)
-
----
 
 # 🏗 Architecture
 
