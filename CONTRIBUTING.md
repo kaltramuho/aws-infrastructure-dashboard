@@ -1,69 +1,121 @@
-# Contributing Guidelines
+# Contributing
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
-documentation, we greatly value feedback and contributions from our community.
+Thank you for your interest in contributing to **AWS Infrastructure Dashboard**.
 
-Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
-information to effectively respond to your bug report or contribution.
+We welcome bug reports, feature suggestions, documentation improvements, and pull requests that help improve the platform.
 
+---
 
-## Reporting Bugs/Feature Requests
+## Reporting Issues
 
-We welcome you to use the GitHub issue tracker to report bugs or suggest features.
+Before opening a new issue, please:
 
-When filing an issue, please check existing open, or recently closed, issues to make sure somebody else hasn't already
-reported the issue. Please try to include as much information as you can. Details like these are incredibly useful:
+- Search existing issues to avoid duplicates.
+- Provide a clear description of the problem.
+- Include steps to reproduce the issue.
+- Specify your environment (Python version, operating system, AWS service, etc.).
+- Attach logs or screenshots when applicable.
 
-* A reproducible test case or series of steps
-* The version of our code being used
-* Any modifications you've made relevant to the bug
-* Anything unusual about your environment or deployment
+---
 
-
-## Contributing via Pull Requests
-Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
-
-1. You are working against the latest source on the *main* branch.
-2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
-
-To send us a pull request, please:
+## Development Workflow
 
 1. Fork the repository.
-2. Modify the source; please focus on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Ensure local tests pass.
-4. Commit to your fork using clear commit messages.
-5. Send us a pull request, answering any default questions in the pull request interface.
-6. Pay attention to any automated CI failures reported in the pull request, and stay involved in the conversation.
+2. Create a feature branch.
 
-GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
-[creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
-
-
-## Finding contributions to work on
-Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
-
-
-## Code of Conduct
-This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
-For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
-
-
-## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
-
-## Running unit tests:
-You might need to install `coverage` which is not in `requirements.txt`, since this is not needed for the tool itself:
-```sh
-pip install coverage
+```bash
+git checkout -b feature/my-feature
 ```
 
-```sh
-# run this under the project root
-coverage run -m unittest discover && coverage report && coverage erase
+3. Install project dependencies.
+
+```bash
+pip install -r requirements.txt
 ```
 
-## Licensing
+4. Make your changes.
 
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+5. Verify everything works correctly before submitting.
+
+6. Commit using descriptive commit messages.
+
+```bash
+git commit -m "Add CloudWatch widget improvements"
+```
+
+7. Push your branch.
+
+```bash
+git push origin feature/my-feature
+```
+
+8. Open a Pull Request.
+
+---
+
+# Coding Standards
+
+Please keep contributions:
+
+- Clean and readable
+- Well documented
+- Backward compatible whenever possible
+- Consistent with the existing project structure
+
+---
+
+# Testing
+
+Run the unit tests before submitting a Pull Request.
+
+```bash
+coverage run -m unittest discover
+coverage report
+coverage erase
+```
+
+---
+
+# Security
+
+If you discover a potential security vulnerability, please do **not** create a public issue.
+
+Instead, contact the project maintainer privately with:
+
+- vulnerability description
+- affected component
+- reproduction steps
+- possible mitigation
+
+---
+
+# Feature Requests
+
+Suggestions are always welcome.
+
+Good feature requests include:
+
+- Business use case
+- Expected behavior
+- Possible implementation
+- Benefits for users
+
+---
+
+# Project Roadmap
+
+Community contributions are especially welcome in areas such as:
+
+- Additional AWS service support
+- Infrastructure visualization
+- Dashboard templates
+- Performance improvements
+- CLI enhancements
+- Documentation
+- Testing
+
+---
+
+# License
+
+By contributing to this repository, you agree that your contributions will be licensed under the project's MIT License.
